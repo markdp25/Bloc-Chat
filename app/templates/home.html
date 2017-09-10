@@ -1,7 +1,15 @@
 <div class="room-nav">
-    <h1>Bloc Chat</h1>
+  <a href="home" class="title">Bloc Chat</a>
     <span class="new-room-button" type="button" ng-click="home.addRoom()">New Room</span>
+    <p class="active"> Active Rooms: </p>
+
     <div ng-repeat="room in home.rooms">
-        <h3>{{ room.name }}</h3>
+        <a href="chat" class="room-name" ng-click="home.setCurrentRoom(room)">
+          {{ room.name }}</a>
+
     </div>
 </div>
+
+<section>
+  <p> Test Test </p>
+</section>
