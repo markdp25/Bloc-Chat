@@ -9,17 +9,20 @@ html {
    font-size: 100%;
 }
 
+.body {
+    background-color: #65CCB8;
+}
 
 /*Sidebar*/
 
 .new-room-button {
-    border: 1px solid black;
+    border: 2px solid #3AAFA9;
     margin-left: 3rem;
     padding: 1rem;
     margin-top: 3rem;
     margin-bottom: 1rem;
-    background-color: black;
-    color: white;
+    background-color: #A8D0E6;
+    color: #3AAFA9;
     font-weight: bold;
 }
 
@@ -28,7 +31,7 @@ html {
 }
 
 .room-nav {
-    /*background-color: #F13C20;*/
+    background-color: #F13C20;
     position: fixed;
     width: 25%;
     top: 0px;
@@ -41,9 +44,10 @@ html {
 .room-name {
     margin-top: 2rem;
     font-size: 24px;
-    color: black;
+    color: #3AAFA9;
     font-weight: bold;
     text-decoration: underline;
+    text-shadow: 2px 2px black;
     padding-left: 3rem;
 }
 
@@ -51,33 +55,45 @@ html {
   padding-top: 2rem;
   padding-left: 3rem;
   text-decoration: underline;
+  text-shadow: 2px 2px black;
   font-weight: bold;
   font-size: 20px;
+  color: #3AAFA9;
 }
 .room-name:hover {
     cursor: pointer;
 }
 
+.tagline {
+  color: #3AAFA9;
+  font-style: italic;
+  padding-bottom: 2rem;
+  margin-left: 2rem;
+  font-weight: bold;
+  text-shadow: 2px 2px black;
+  text-transform: capitalize;
+}
+
 .title {
-  color: #0B0C10;
+  color: #3AAFA9;
   font-weight: bolder;
   font-size: 50px;
   text-decoration: underline;
   text-transform: full-width;
+  text-shadow: 2px 2px black;
   font-style:oblique;
-  padding-bottom: 2rem;
   padding-left: 2rem;
   padding-right: 2rem;
 }
 
 @media (min-width: 640px) {
     html { font-size: 112%; }
-
     .column {
-        float: left;
+        float: right;
         padding-left: 1rem;
         padding-right: 1rem;
     }
+
     .column.full { width: 100%; }
     .column.two-thirds { width: 66.7%; }
     .column.half { width: 50%; }
@@ -85,6 +101,7 @@ html {
     .column.fourth { width: 25%; }
     .column.flow-opposite { float: right; }
 }
+
 
 @media (min-width: 1024px) {
      html { font-size: 120%; }
@@ -102,34 +119,55 @@ html {
 
 /* messages and chat */
 
+.even {
+  border: 2px solid;
+  border-radius: 10px;
+  background-color: #EFE2BA;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.odd {
+  border: 2px solid;
+  border-radius: 10px;
+  background-color: #C1C8E4;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-bottom: 1rem;
+}
+
 .messages {
   display: table;
   text-align: center;
-  margin-left: 665px;
+  margin-left: 600px;
 }
 
 .header {
   font-weight: bolder;
   font-size: 50px;
-  color: #C5CBE3;
+  color: black;
   text-decoration: underline;
 }
 
 .username {
 
   font-weight: bold;
-  font-size: 24px;
+  font-size: 14px;
   color: #f13C20;
 }
 
-.content-plate {
-  border: 2px solid;
-  border-radius: 10px;
-  background-color: #EFE2BA;
-  padding-left: 1rem;
-  padding-right: 1rem;
+.usernameTwo {
+  font-weight: bold;
+  font-size: 14px;
+  color: #3500D3;
 }
 
 .timeplate {
   font-weight: bold;
+}
+
+.content {
+  font-size: 14px;
+  padding-left: .5rem;
 }

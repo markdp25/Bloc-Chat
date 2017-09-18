@@ -1,5 +1,5 @@
 (function() {
-    function HomeCtrl(Room, $uibModal) {
+    function HomeCtrl(Message, Room, $uibModal) {
       var home = this;
         home.rooms = Room.all;
         home.currentRoom = null;
@@ -11,11 +11,15 @@
                 controller: 'ModalCtrl as modal'
             });
         };
+        home.setCurrentRoom = function(room) {
+          home.currentRoom = room;
+          home.messages = Message.getByRoomId(home.currentRoom.$id);
+          console.log(home.messages);
+        };
 
-      
-    }
+}
 
     angular
         .module('blocChat')
-        .controller('HomeCtrl', ['Room','$uibModal', HomeCtrl]);
+        .controller('HomeCtrl', ['Message', 'Room','$uibModal', HomeCtrl]);
 })();

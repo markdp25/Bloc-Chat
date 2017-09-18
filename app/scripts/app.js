@@ -11,16 +11,7 @@
                  url: '/',
                  controller: 'HomeCtrl as home',
                  templateUrl: '/templates/home.html'
-             })
-             .state('chat', {
-                  url: '/chat',
-                  controller: 'MessageCtrl as chat',
-                  templateUrl: '/templates/message.html'
              });
-
-
-
-
      }
 
      angular

@@ -1,15 +1,25 @@
+
 <div class="room-nav">
-  <a href="home" class="title">Bloc Chat</a>
+  <h1 class="title">Bloc Chat</h1>
+    <p class="tagline"> A fun place to chat with your friends </p>
     <span class="new-room-button" type="button" ng-click="home.addRoom()">New Room</span>
     <p class="active"> Active Rooms: </p>
 
     <div ng-repeat="room in home.rooms">
-        <a href="chat" class="room-name" ng-click="home.setCurrentRoom(room)">
-          {{ room.name }}</a>
+        <p class="room-name" ng-click="home.setCurrentRoom(room)">
+          {{ room.name }}</p>
 
     </div>
 </div>
 
-<section>
-  <p> Test Test </p>
-</section>
+
+<div class="messages">
+    <div class="header">
+        <h3> {{ home.currentRoom.name}} </h3>
+    </div>
+    <div ng-class="{'even' : $index % 2===0, 'odd' : $index % 2 !== 0}" ng-repeat="message in home.messages">
+      <span ng-class="{'username' : $index % 2 ===0, 'usernameTwo' : $index % 2 !== 0}"> {{ message.username }}:</span><span class="content"> {{ message.content }}</span>
+      </br>
+     <span class="timeplate">{{ message.sentAt }}</span>
+    </div>
+</div>
