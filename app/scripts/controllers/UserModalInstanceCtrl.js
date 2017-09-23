@@ -1,3 +1,4 @@
+
 (function() {
   function UserModalInstanceCtrl($uibModalInstance, $cookies){}
       var user= this;
