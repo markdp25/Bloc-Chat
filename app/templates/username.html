@@ -1,0 +1,19 @@
+<header>
+  <h1 class="chat-box">Chatroom Log in</h1>
+</header>
+<p class="instruction"> Please Enter a username:</p>
+<input type="text" ng-model="user.username" placeholder="Enter username here..." required style="padding-left: 1rem">
+
+<div class="contain-list">
+    <p class="list-top"> Username must have the following:</p>
+      <ul class="lists">
+        <li> Must contain at least 8 characters</li>
+        <li> Must contain at least one number</li>
+      </ul>
+</div>
+
+<footer class="footer">
+<div>
+  <button class="btn-new" type="button" ng-click="user.setUsername" ng-disabled="user.username === null"> Submit </button>
+</div>
+</footer>

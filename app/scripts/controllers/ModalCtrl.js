@@ -4,7 +4,7 @@
             $uibModalInstance.dismiss();
         };
 
-        this.submit = function () {
+        this.createRoom = function () {
             Room.add(this.newRoom);
             $uibModalInstance.close();
         };

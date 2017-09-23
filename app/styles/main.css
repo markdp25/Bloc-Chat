@@ -171,3 +171,38 @@ html {
   font-size: 14px;
   padding-left: .5rem;
 }
+
+/* Chatroom prompt */
+
+.chat-box {
+  text-decoration: underline;
+  text-align: center;
+}
+
+.instruction {
+  font-weight: bold;
+  padding-left: 1rem;
+}
+
+.contain-list {
+  position: static;
+  right: 30px;
+  top: 50px;
+  font-size: 10px;
+  padding-left: 1rem;
+}
+
+.list-top {
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+.lists {
+  font-style: italic;
+}
+
+.footer {
+  right: 10px;
+  bottom: 10px;
+  position: fixed;
+}
