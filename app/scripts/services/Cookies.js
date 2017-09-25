@@ -1,23 +1,19 @@
-
 (function() {
     function BlocChatCookies($cookies, $uibModal) {
+
+      //gets stored username if applicable
         var currentUser = $cookies.get('blocChatCurrentUser');
+
+        //if no stored username then prompt opens up to get a username
         if (!currentUser || currentUser === '') {
-          var modalInstance= $uibModal.open({
+          $uibModal.open({
                 templateUrl: '/templates/username.html',
                 size: 'sm',
                 controller: 'UserModalInstanceCtrl as User',
+                backdrop: 'static' //prevents backdrop click error
             });
-
-            modalInstance.result.then(function(name) {
-               this.username = name;
-               $uibModal.create(this.username);
-           }, function() {
-               console.log('Modal dismissed at ' + new Date());
-           });
-        }
     }
-
+}
     angular
         .module('blocChat')
         .run(['$cookies', '$uibModal', BlocChatCookies]);
