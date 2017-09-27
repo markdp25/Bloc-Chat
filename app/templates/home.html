@@ -10,18 +10,20 @@
 
     </div>
 </div>
-
-
+<img ng-show="home.currentRoom === null"class=" backpic" src="https://t3.ftcdn.net/jpg/01/16/49/22/240_F_116492227_1YOEpUJtkTBkQWZ0kBXbT2FxtBGliuka.jpg">
+<h5 class="mainhead" ng-show="home.currentRoom === null"> Join a current room or create a new room to chat! </h5>
 <div class="messages">
     <div class="header">
         <h3> {{ home.currentRoom.name}} </h3>
     </div>
+    <div class="content-box">
     <div ng-class="{'even' : $index % 2===0, 'odd' : $index % 2 !== 0}" ng-repeat="message in home.messages">
       <span ng-class="{'username' : $index % 2 ===0, 'usernameTwo' : $index % 2 !== 0}"> {{ message.username }}:</span><span class="content"> {{ message.content }}</span>
       </br>
-     <span class="timeplate">{{ message.sentAt }}</span>
+     <span class="timeplate">{{ message.sentAt | date : "shortTime" }}</span>
+   </div>
     </div>
-    <div class="message-field">
+    <div class="message-field" ng-hide="home.currentRoom === null">
         <input type="text" name="input" placeholder="Enter message here..." class="message-box" ng-model="home.newMessage.content" style="width:500px;">
         <button class="btn-new-message" type="button" ng-click="home.sendMessage()">Hit to send</button>
     </div>

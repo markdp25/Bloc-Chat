@@ -3,6 +3,9 @@
         var home = this;
         home.rooms = Room.all;
         home.currentRoom = null;
+        home.currentUser = $cookies.get('blocChatCurrentUser');
+
+
 
         home.addRoom = function() {
             $uibModal.open({
@@ -19,13 +22,13 @@
 
         home.sendMessage = function () {
             home.newMessage.roomId = home.currentRoom.$id;
-            home.newMessage.username = home.$cookies.get('blocChatCurrentUser');
+            home.newMessage.username = home.currentUser;
             Message.send(home.newMessage);
         };
 
-    }
+      }
 
     angular
         .module('blocChat')
-        .controller('HomeCtrl', ['Message', 'Room', '$uibModal', '$cookies', HomeCtrl]);
+        .controller('HomeCtrl', ['Room','Message', '$uibModal', '$cookies', HomeCtrl]);
 })();

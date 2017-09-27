@@ -13,6 +13,22 @@ html {
     background-color: #65CCB8;
 }
 
+.mainhead {
+  margin-left: 51rem;
+  margin-top: 3rem;
+  font-size: 24px;
+  font-weight: bold;
+  color: #F13C20;
+  text-decoration: underline;
+}
+.backpic {
+  margin-left: 47rem;
+  margin-top: 5rem;
+  width: 50%;
+  border: 2px solid;
+  border-radius: 10px;
+}
+
 /*Sidebar*/
 
 .new-room-button {
@@ -148,6 +164,7 @@ html {
   font-size: 50px;
   color: black;
   text-decoration: underline;
+  padding-right: 15rem;
 }
 
 .username {
@@ -170,8 +187,18 @@ html {
 .content {
   font-size: 14px;
   padding-left: .5rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
 }
 
+.content-box {
+  margin-top: 3rem;
+  padding-right: 15rem;
+}
+
+.message-field {
+  margin-top: 5rem;
+}
 /* Chatroom prompt */
 
 .chat-box {
